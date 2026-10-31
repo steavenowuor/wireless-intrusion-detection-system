@@ -57,3 +57,12 @@ reports/awid3_deauth_candidate_manifest.csv
 
 # Accidental terminal diff output; retained locally for inspection.
 bject Name, Length
+
+# Local submission and development documents
+SUBMISSION_CHECKLIST.md
+reports/POSTER_CONTENT.md
+reports/A1_poster_draft.md
+reports/awid3_awid3_schema.txt
+reports/awid3_*_audit.md
+reports/awid3_*_report.md
+reports/awid3_traceable_deauth_data_investigation.md
