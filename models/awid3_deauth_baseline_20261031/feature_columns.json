@@ -1,0 +1,11 @@
+[
+  "packet_count",
+  "management_frame_count",
+  "retry_frame_count",
+  "retry_frame_fraction",
+  "frame_len_mean",
+  "frame_len_max",
+  "signal_dbm_mean",
+  "signal_dbm_min",
+  "unique_transmitter_count"
+]

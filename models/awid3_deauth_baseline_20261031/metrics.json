@@ -1,0 +1,179 @@
+{
+  "accuracy": 0.9917355371900827,
+  "precision": 1.0,
+  "recall": 0.9722222222222222,
+  "f1_score": 0.9859154929577465,
+  "confusion_matrix_labels": [
+    "normal (0)",
+    "malicious (1)"
+  ],
+  "confusion_matrix": [
+    [
+      85,
+      0
+    ],
+    [
+      1,
+      35
+    ]
+  ],
+  "classification_report": {
+    "normal": {
+      "precision": 0.9883720930232558,
+      "recall": 1.0,
+      "f1-score": 0.9941520467836257,
+      "support": 85.0
+    },
+    "malicious": {
+      "precision": 1.0,
+      "recall": 0.9722222222222222,
+      "f1-score": 0.9859154929577465,
+      "support": 36.0
+    },
+    "accuracy": 0.9917355371900827,
+    "macro avg": {
+      "precision": 0.9941860465116279,
+      "recall": 0.9861111111111112,
+      "f1-score": 0.990033769870686,
+      "support": 121.0
+    },
+    "weighted avg": {
+      "precision": 0.9918316355948491,
+      "recall": 0.9917355371900827,
+      "f1-score": 0.9917015018436947,
+      "support": 121.0
+    }
+  },
+  "attack_subtype_detection": {
+    "Deauth": {
+      "support": 36,
+      "detected_as_malicious": 35,
+      "recall": 0.9722222222222222
+    }
+  },
+  "binary_classification": {
+    "accuracy": 0.9917355371900827,
+    "precision": 1.0,
+    "recall": 0.9722222222222222,
+    "f1_score": 0.9859154929577465,
+    "confusion_matrix": [
+      [
+        85,
+        0
+      ],
+      [
+        1,
+        35
+      ]
+    ]
+  },
+  "deauthentication_detection": {
+    "available": true,
+    "selected_source_labels": [
+      "deauth"
+    ],
+    "support": 36,
+    "precision": 1.0,
+    "recall": 0.9722222222222222,
+    "f1_score": 0.9859154929577465,
+    "confusion_matrix": [
+      [
+        85,
+        0
+      ],
+      [
+        1,
+        35
+      ]
+    ]
+  },
+  "split_method": "stratified by original label",
+  "attack_type_classification": {
+    "accuracy": 0.9917355371900827,
+    "labels": [
+      "Deauth",
+      "Normal"
+    ],
+    "confusion_matrix": [
+      [
+        35,
+        1
+      ],
+      [
+        0,
+        85
+      ]
+    ]
+  },
+  "model_path": "models/awid3_deauth_baseline_20261031/decision_tree.joblib",
+  "train_rows": 483,
+  "test_rows": 121,
+  "purged_rows": 0,
+  "train_binary_class_counts": {
+    "normal": 339,
+    "malicious": 144
+  },
+  "test_binary_class_counts": {
+    "normal": 85,
+    "malicious": 36
+  },
+  "train_source_label_counts": {
+    "Deauth": 144,
+    "Normal": 339
+  },
+  "test_source_label_counts": {
+    "Deauth": 36,
+    "Normal": 85
+  },
+  "dropped_identifier_columns": [],
+  "group_column": null,
+  "input_csv_path": "data/awid3_deauth_capture_sequence_windows_v2.csv",
+  "window_feature_columns": [
+    "packet_count",
+    "management_frame_count",
+    "retry_frame_count",
+    "retry_frame_fraction",
+    "frame_len_mean",
+    "frame_len_max",
+    "signal_dbm_mean",
+    "signal_dbm_min",
+    "unique_transmitter_count"
+  ],
+  "test_time_range": null,
+  "evaluation_scope": "Exploratory stratified random holdout within one capture sequence; nearby windows may be correlated.",
+  "independent_capture_validation": false,
+  "majority_class_baseline": {
+    "method": "always predict the majority class in the training partition",
+    "predicted_class": "Normal",
+    "accuracy": 0.7024793388429752,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1_score": 0.0,
+    "confusion_matrix_labels": [
+      "Normal",
+      "Deauth"
+    ],
+    "confusion_matrix": [
+      [
+        85,
+        0
+      ],
+      [
+        36,
+        0
+      ]
+    ],
+    "test_rows": 121
+  },
+  "feature_columns": [
+    "packet_count",
+    "management_frame_count",
+    "retry_frame_count",
+    "retry_frame_fraction",
+    "frame_len_mean",
+    "frame_len_max",
+    "signal_dbm_mean",
+    "signal_dbm_min",
+    "unique_transmitter_count"
+  ]
+}

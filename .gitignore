@@ -1,0 +1,59 @@
+# Python environments, bytecode, test and coverage output
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.test-temp/
+.agents/
+.coverage
+.coverage.*
+htmlcov/
+
+# Local credentials and secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Temporary files, logs, local editor and operating-system files
+*.tmp
+*.temp
+*.log
+*.bak
+~$*
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build and packaging output
+build/
+dist/
+*.egg-info/
+
+# AWID3 source, prepared, and derived datasets are not published
+data/*
+!data/README.md
+!data/.gitkeep
+
+# Keep the trained submission model and non-CSV evaluation artifacts
+models/*
+!models/.gitkeep
+!models/awid3_deauth_baseline_20261031/
+!models/awid3_deauth_baseline_20261031/**
+# Held-out feature/prediction tables are derived CSV data; do not publish them.
+models/awid3_deauth_baseline_20261031/*.csv
+models/**/test_*.csv
+# This generated sidecar records machine-specific source paths and row metadata.
+models/**/training_data_manifest.json
+
+# Preserve project reports, audit documentation, and poster content.
+reports/*
+!reports/
+!reports/**
+reports/awid3_csv_inventory.csv
+reports/awid3_deauth_candidate_manifest.csv
+
+# Accidental terminal diff output; retained locally for inspection.
+bject Name, Length

@@ -1,0 +1,47 @@
+{
+  "dataset": "data/awid3_deauth_capture_sequence_windows_v2.csv",
+  "dataset_rows": 604,
+  "dataset_window_label_counts": {
+    "Normal": 424,
+    "Deauth": 180
+  },
+  "source_sequence_confidence": "strongly corroborated ordered sequence; original pcap identity unestablished",
+  "independent_capture_validation": false,
+  "split_interpretation": "Exploratory stratified random holdout within one capture sequence; nearby windows may be correlated.",
+  "random_seed": 42,
+  "requested_test_fraction": 0.2,
+  "feature_columns": [
+    "packet_count",
+    "management_frame_count",
+    "retry_frame_count",
+    "retry_frame_fraction",
+    "frame_len_mean",
+    "frame_len_max",
+    "signal_dbm_mean",
+    "signal_dbm_min",
+    "unique_transmitter_count"
+  ],
+  "excluded_target_derived_and_metadata_columns": [
+    "Label",
+    "capture_id",
+    "deauth_frame_count",
+    "deauth_frame_fraction",
+    "deauth_frames_per_second",
+    "mixed_window",
+    "source_files",
+    "source_frame_number_first",
+    "source_frame_number_last",
+    "source_label_counts",
+    "source_labels",
+    "source_time_epoch_first",
+    "source_time_epoch_last",
+    "source_time_epoch_max",
+    "source_time_epoch_min",
+    "window_label",
+    "window_start_epoch"
+  ],
+  "model": "scikit-learn DecisionTreeClassifier",
+  "metrics_file": "metrics.json",
+  "predictions_file": "test_predictions.csv",
+  "majority_baseline_file": "majority_baseline.json"
+}
